@@ -1,6 +1,6 @@
 
 from flask import Flask, jsonify, render_template
-from flask_cors import CORS
+
 from flask import request
 import chess
 import chess.engine
@@ -17,9 +17,9 @@ def get_data():
     data = {"message": "Hello from the Flask API!(Flask Backend is functioning!)"}
     return jsonify(data)
 
-# @app.route('/')
-# def root():
-#     return render_template("index.html")
+@app.route('/')
+def root():
+    return render_template("index.html")
 
 @app.route('/make_move',methods=["POST"])
 def make_move():
@@ -36,5 +36,5 @@ def make_move():
     return {'fen': fen,'best_move': str(result.move)}
 
 
-# if __name__ == '__main__':
-#     app.run(debug=True, threaded=True)
+if __name__ == '__main__':
+    app.run(debug=True, threaded=True)
