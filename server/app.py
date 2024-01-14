@@ -36,5 +36,5 @@ def make_move():
     return {'fen': fen,'best_move': str(result.move)}
 
 
-if __name__ == '__main__':
-    app.run(debug=True, threaded=True)
+# if __name__ == '__main__':
+#     app.run(debug=True, threaded=True)
