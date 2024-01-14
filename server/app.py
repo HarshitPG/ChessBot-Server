@@ -8,7 +8,7 @@ import chess.engine
 engine = chess.engine.SimpleEngine.popen_uci(r"../server/engine/stockfish-windows-x86-64-modern.exe")
 
 app = Flask(__name__)
-CORS(app) 
+ 
 
 
 
