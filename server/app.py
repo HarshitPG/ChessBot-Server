@@ -5,7 +5,7 @@ from flask import request
 import chess
 import chess.engine
 
-engine = chess.engine.SimpleEngine.popen_uci(r"C:/Users/harsh/OneDrive/Desktop/chessBot/engine/stockfish-windows-x86-64-modern.exe")
+engine = chess.engine.SimpleEngine.popen_uci(r"../server/engine/stockfish-windows-x86-64-modern.exe")
 
 app = Flask(__name__, template_folder='../client/public', static_folder='../client/public')
 CORS(app) 
